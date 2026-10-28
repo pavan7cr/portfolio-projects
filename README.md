@@ -22,3 +22,8 @@
 ## How to run (all, locally)
 - Python venv: ~/workspace/projects/venv/bin/python (fastapi, uvicorn, sqlalchemy, pypdf, scikit-learn, requests, reportlab installed in venv, not system Python).
 - SaaS: see above. Pipeline: venv/bin/python data-pipeline-platform/test_pipeline.py. RAG: venv/bin/python rag-doc-intelligence/rag_full.py --eval
+
+## 2026-10-28 code-fix round (all local tests, no paid services, no Render changes)
+- SaaS: JWT access+refresh, bcrypt, owner/staff roles, Postgres via DATABASE_URL (SQLite local default), React frontend on Bearer tokens, pytest 5/5, GitHub Actions SaaS tests. Stripe NOT added (no test-mode webhook test without a key).
+- Pipeline: renamed Scheduled/Batch, 50,000-row synthetic run (46,000 clean, 2,500 duplicates, 1,500 nulls, $11,696,354.36 synthetic total, 0.385s, idempotent), webhook alerts with file fallback (mock-endpoint tested), daily GitHub Actions workflow. No Render Cron Job created.
+- RAG: overlapping chunks with page metadata, 33-question eval (TF-IDF 33/33 top-1, BM25 32/33), BM25 second method (not embeddings, see RAG README for why), upload-PDF endpoint tested locally, not-found guardrail kept.

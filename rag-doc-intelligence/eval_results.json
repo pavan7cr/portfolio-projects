@@ -1,0 +1,71 @@
+{
+  "n_questions": 33,
+  "methods": {
+    "tfidf": {
+      "top1": "33/33 = 100.0%",
+      "top1_count": 33,
+      "top3": "33/33 = 100.0%",
+      "top3_count": 33,
+      "mean_latency_ms": 1.18,
+      "max_latency_ms": 4.14
+    },
+    "bm25": {
+      "top1": "32/33 = 97.0%",
+      "top1_count": 32,
+      "top3": "33/33 = 100.0%",
+      "top3_count": 33,
+      "mean_latency_ms": 0.03,
+      "max_latency_ms": 0.17
+    }
+  },
+  "failures": [
+    {
+      "method": "bm25",
+      "question": "How do you make database queries faster, caching or indexing?",
+      "expected_source": "lecture4.txt",
+      "got": "lecture3.txt",
+      "score": 3.103
+    }
+  ],
+  "hard_probe_failures": [
+    {
+      "question": "What does FastAPI use for caching?",
+      "expected_source": "lecture6.txt",
+      "note": "Cross-topic question with no single grounding chunk; top-1 is a keyword match, not a correct answer.",
+      "tfidf": {
+        "got": "lecture3.txt",
+        "score": 0.111
+      },
+      "bm25": {
+        "got": "lecture3.txt",
+        "score": 1.551
+      }
+    },
+    {
+      "question": "Can a p-value tell me if my Docker image is correct?",
+      "expected_source": "lecture2.txt",
+      "note": "Cross-topic question with no single grounding chunk; top-1 is a keyword match, not a correct answer.",
+      "tfidf": {
+        "got": "docs/lecture5.pdf",
+        "score": 0.265
+      },
+      "bm25": {
+        "got": "docs/lecture5.pdf",
+        "score": 3.836
+      }
+    },
+    {
+      "question": "What is the difference between inner join and hypothesis testing?",
+      "expected_source": "lecture1.txt",
+      "note": "Cross-topic question with no single grounding chunk; top-1 is a keyword match, not a correct answer.",
+      "tfidf": {
+        "got": "lecture2.txt",
+        "score": 0.311
+      },
+      "bm25": {
+        "got": "lecture2.txt",
+        "score": 4.193
+      }
+    }
+  ]
+}

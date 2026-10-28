@@ -21,18 +21,28 @@
     "2": 10
   },
   "weather": {
-    "time": "2026-10-28T17:15",
+    "time": "2026-10-28T20:30",
     "interval": 900,
-    "temperature_2m": 22.8
+    "temperature_2m": 26.4
   },
   "checks": {
     "raw_rows": 6,
+    "rows_in": 6,
     "clean_rows": 4,
+    "duplicates_removed": 1,
+    "null_rows_removed": 1,
     "clean_duplicates": 0,
     "passed": true
   },
   "alerts": [
     "Revenue drop: 200.0 -> 45.0"
   ],
-  "status": "OK"
+  "alert_delivery": {
+    "sent": false,
+    "via": "file",
+    "reason": "no webhook configured"
+  },
+  "status": "OK",
+  "runtime_seconds": 1.752,
+  "total_revenue": 445.5
 }

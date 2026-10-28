@@ -1,0 +1,1 @@
+FastAPI is a Python web framework for building APIs. It uses type hints to validate request data and generates OpenAPI documentation automatically. An endpoint is a function decorated with a route, such as @app.get. Pydantic models define the shape of request and response data.

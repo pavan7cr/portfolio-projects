@@ -1,1 +1,134 @@
-[{"question":"What does a left join return?","expected_source":"lecture1.txt"},{"question":"What is an inner join?","expected_source":"lecture1.txt"},{"question":"What is a p-value below 0.05 used for?","expected_source":"lecture2.txt"},{"question":"What is the null hypothesis in hypothesis testing?","expected_source":"lecture2.txt"},{"question":"Why is cache invalidation hard?","expected_source":"lecture3.txt"},{"question":"What does a Redis cache hit avoid?","expected_source":"lecture3.txt"},{"question":"What do PostgreSQL indexes speed up?","expected_source":"lecture4.txt"},{"question":"What slows down writes when there are too many indexes?","expected_source":"lecture4.txt"},{"question":"What is a B-tree index used for?","expected_source":"lecture4.txt"},{"question":"What is SQL used for in joins?","expected_source":"lecture1.txt"}]
+[
+  {
+    "expected_source": "lecture1.txt",
+    "question": "What does a left join return?"
+  },
+  {
+    "expected_source": "lecture1.txt",
+    "question": "What is an inner join?"
+  },
+  {
+    "expected_source": "lecture1.txt",
+    "question": "What do SQL joins do?"
+  },
+  {
+    "expected_source": "lecture1.txt",
+    "question": "What happens to unmatched rows in a left join?"
+  },
+  {
+    "expected_source": "lecture1.txt",
+    "question": "Which join returns only rows that match in both tables?"
+  },
+  {
+    "expected_source": "lecture1.txt",
+    "question": "What table's rows are all returned by a left join?"
+  },
+  {
+    "expected_source": "lecture1.txt",
+    "question": "Does a left join drop rows from the left table?"
+  },
+  {
+    "expected_source": "lecture2.txt",
+    "question": "What is a p-value below 0.05 used for?"
+  },
+  {
+    "expected_source": "lecture2.txt",
+    "question": "What is the null hypothesis in hypothesis testing?"
+  },
+  {
+    "expected_source": "lecture2.txt",
+    "question": "What does a p-value below 0.05 NOT mean?"
+  },
+  {
+    "expected_source": "lecture2.txt",
+    "question": "What is the first step in hypothesis testing?"
+  },
+  {
+    "expected_source": "lecture2.txt",
+    "question": "What is commonly used to reject the null hypothesis?"
+  },
+  {
+    "expected_source": "lecture3.txt",
+    "question": "Why is cache invalidation hard?"
+  },
+  {
+    "expected_source": "lecture3.txt",
+    "question": "What does a Redis cache hit avoid?"
+  },
+  {
+    "expected_source": "lecture3.txt",
+    "question": "What does Redis store in memory?"
+  },
+  {
+    "expected_source": "lecture3.txt",
+    "question": "What must happen to stale cached data?"
+  },
+  {
+    "expected_source": "lecture3.txt",
+    "question": "How does a cache hit avoid a database query?"
+  },
+  {
+    "expected_source": "lecture4.txt",
+    "question": "What do PostgreSQL indexes speed up?"
+  },
+  {
+    "expected_source": "lecture4.txt",
+    "question": "What slows down writes when there are too many indexes?"
+  },
+  {
+    "expected_source": "lecture4.txt",
+    "question": "What is a B-tree index used for?"
+  },
+  {
+    "expected_source": "lecture4.txt",
+    "question": "What kind of queries does a B-tree index help?"
+  },
+  {
+    "expected_source": "lecture4.txt",
+    "question": "What do indexes speed up on filtered columns?"
+  },
+  {
+    "expected_source": "lecture5.pdf",
+    "question": "What do Docker containers package?"
+  },
+  {
+    "expected_source": "lecture5.pdf",
+    "question": "What is a container image?"
+  },
+  {
+    "expected_source": "lecture5.pdf",
+    "question": "What runs the same on any host?"
+  },
+  {
+    "expected_source": "lecture6.txt",
+    "question": "What is FastAPI?"
+  },
+  {
+    "expected_source": "lecture6.txt",
+    "question": "What does FastAPI use to validate request data?"
+  },
+  {
+    "expected_source": "lecture6.txt",
+    "question": "What documentation does FastAPI generate automatically?"
+  },
+  {
+    "expected_source": "lecture6.txt",
+    "question": "What is an endpoint in FastAPI?"
+  },
+  {
+    "expected_source": "lecture6.txt",
+    "question": "What defines the shape of request and response data in FastAPI?"
+  },
+  {
+    "expected_source": "lecture1.txt",
+    "question": "What is SQL used for in joins?"
+  },
+  {
+    "expected_source": "lecture4.txt",
+    "question": "How do you make database queries faster, caching or indexing?"
+  },
+  {
+    "expected_source": "lecture3.txt",
+    "question": "What is the difference between a Redis cache and a PostgreSQL index?"
+  }
+]

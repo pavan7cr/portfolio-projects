@@ -1,0 +1,7 @@
+{"run": "2026-10-28 20:27:57", "rows_in": 6, "rows_out": 4, "passed": true, "alerts": ["Revenue drop: 200.0 -> 45.0"]}
+{"run": "2026-10-28 20:27:59", "rows_in": 6, "rows_out": 4, "passed": true, "alerts": ["Revenue drop: 200.0 -> 45.0"]}
+{"run": "2026-10-28 20:28:01", "rows_in": 50000, "rows_out": 46000, "passed": true, "alerts": []}
+{"run": "2026-10-28 20:28:10", "rows_in": 50000, "rows_out": 46000, "passed": true, "alerts": []}
+{"run": "2026-10-28 20:31:15", "rows_in": 6, "rows_out": 4, "passed": true, "alerts": ["Revenue drop: 200.0 -> 45.0"]}
+{"run": "2026-10-28 20:31:36", "rows_in": 6, "rows_out": 4, "passed": true, "alerts": ["Revenue drop: 200.0 -> 45.0"]}
+{"run": "2026-10-28 20:31:38", "rows_in": 6, "rows_out": 4, "passed": true, "alerts": ["Revenue drop: 200.0 -> 45.0"]}

@@ -1,0 +1,174 @@
+{
+  "daily_revenue": [
+    {
+      "date": "2026-09-01",
+      "revenue": 391453.23,
+      "orders": 1550
+    },
+    {
+      "date": "2026-09-02",
+      "revenue": 388006.06,
+      "orders": 1540
+    },
+    {
+      "date": "2026-09-03",
+      "revenue": 394835.12,
+      "orders": 1562
+    },
+    {
+      "date": "2026-09-04",
+      "revenue": 384723.21,
+      "orders": 1522
+    },
+    {
+      "date": "2026-09-05",
+      "revenue": 371835.53,
+      "orders": 1499
+    },
+    {
+      "date": "2026-09-06",
+      "revenue": 384139.23,
+      "orders": 1499
+    },
+    {
+      "date": "2026-09-07",
+      "revenue": 377646.13,
+      "orders": 1522
+    },
+    {
+      "date": "2026-09-08",
+      "revenue": 396368.37,
+      "orders": 1544
+    },
+    {
+      "date": "2026-09-09",
+      "revenue": 379353.55,
+      "orders": 1462
+    },
+    {
+      "date": "2026-09-10",
+      "revenue": 378910.75,
+      "orders": 1525
+    },
+    {
+      "date": "2026-09-11",
+      "revenue": 407924.92,
+      "orders": 1564
+    },
+    {
+      "date": "2026-09-12",
+      "revenue": 403915.68,
+      "orders": 1540
+    },
+    {
+      "date": "2026-09-13",
+      "revenue": 402011.01,
+      "orders": 1609
+    },
+    {
+      "date": "2026-09-14",
+      "revenue": 381751.61,
+      "orders": 1547
+    },
+    {
+      "date": "2026-09-15",
+      "revenue": 394848.2,
+      "orders": 1525
+    },
+    {
+      "date": "2026-09-16",
+      "revenue": 396068.08,
+      "orders": 1585
+    },
+    {
+      "date": "2026-09-17",
+      "revenue": 389039.95,
+      "orders": 1514
+    },
+    {
+      "date": "2026-09-18",
+      "revenue": 381794.71,
+      "orders": 1498
+    },
+    {
+      "date": "2026-09-19",
+      "revenue": 387966.59,
+      "orders": 1500
+    },
+    {
+      "date": "2026-09-20",
+      "revenue": 370013.66,
+      "orders": 1456
+    },
+    {
+      "date": "2026-09-21",
+      "revenue": 387496.0,
+      "orders": 1523
+    },
+    {
+      "date": "2026-09-22",
+      "revenue": 408180.81,
+      "orders": 1611
+    },
+    {
+      "date": "2026-09-23",
+      "revenue": 383148.25,
+      "orders": 1505
+    },
+    {
+      "date": "2026-09-24",
+      "revenue": 401936.51,
+      "orders": 1571
+    },
+    {
+      "date": "2026-09-25",
+      "revenue": 401823.73,
+      "orders": 1557
+    },
+    {
+      "date": "2026-09-26",
+      "revenue": 400161.88,
+      "orders": 1566
+    },
+    {
+      "date": "2026-09-27",
+      "revenue": 384305.51,
+      "orders": 1491
+    },
+    {
+      "date": "2026-09-28",
+      "revenue": 390304.74,
+      "orders": 1537
+    },
+    {
+      "date": "2026-09-29",
+      "revenue": 386009.25,
+      "orders": 1510
+    },
+    {
+      "date": "2026-09-30",
+      "revenue": 390382.09,
+      "orders": 1566
+    }
+  ],
+  "posts_by_user": {},
+  "weather": null,
+  "checks": {
+    "raw_rows": 50000,
+    "rows_in": 50000,
+    "clean_rows": 46000,
+    "duplicates_removed": 2500,
+    "null_rows_removed": 1500,
+    "clean_duplicates": 0,
+    "passed": true
+  },
+  "alerts": [],
+  "alert_delivery": {
+    "sent": false,
+    "via": "file",
+    "reason": "no webhook configured"
+  },
+  "status": "OK",
+  "runtime_seconds": 0.382,
+  "total_revenue": 11696354.36
+}
