@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><title>RAG Document Intelligence</title></head><body>
+<h1>RAG Document Intelligence</h1>
+<p>Ask a question about the lecture documents. Answers are quoted from the documents, with source and score.</p>
+<input id="q" size="60" placeholder="e.g. What is a left join?">
+<button onclick="ask()">Ask</button>
+<pre id="out"></pre>
+<script>
+async function ask(){
+  const q=document.getElementById('q').value;
+  document.getElementById('out').textContent='Asking...';
+  const r=await fetch('https://rag-doc-intelligence-krcj.onrender.com/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})});
+  document.getElementById('out').textContent=JSON.stringify(await r.json(),null,2);
+}
+</script>
+</body></html>
