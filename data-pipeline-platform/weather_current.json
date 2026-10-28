@@ -1,0 +1,10 @@
+{
+  "source": "open-meteo",
+  "location": "Wichita, KS",
+  "current": {
+    "time": "2026-10-28T17:15",
+    "interval": 900,
+    "temperature_2m": 22.8,
+    "wind_speed_10m": 22.5
+  }
+}

@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8"><title>SaaS Invoicing</title>
+<style>body{font-family:system-ui;max-width:700px;margin:40px auto}input,button{padding:8px;margin:4px}pre{background:#f4f4f4;padding:12px}</style></head>
+<body><h1>SaaS Invoicing</h1>
+<p>1. Create tenant, 2. Create first user (bootstrap), 3. Save tenant/user ids, then create client, invoice, pay (Stripe test stub).</p>
+<label>Tenant ID <input id="tid" size="40"></label> <label>User ID <input id="uid" size="40"></label><br>
+<button onclick="api('POST','/tenants',{name:'Acme Studio'},show)">Create tenant</button>
+<button onclick="api('POST','/users',{email:'owner@test.com',password:'pw',role:'owner'},show)">Create first user</button>
+<button onclick="api('POST','/clients',{name:'Client A',email:'c@test.com'},show)">Create client</button>
+<button onclick="api('GET','/dashboard',null,show)">Dashboard</button>
+<pre id="out"></pre>
+<script>
+async function api(m,p,b,cb){const h={'Content-Type':'application/json'};const t=document.getElementById('tid').value,u=document.getElementById('uid').value;if(t)h['X-Tenant-Id']=t;if(u)h['X-User-Id']=u;const r=await fetch(p,{method:m,headers:h,body:b?JSON.stringify(b):undefined});const j=await r.json();if(j.tenant_id)document.getElementById('tid').value=j.tenant_id;if(j.user_id)document.getElementById('uid').value=j.user_id;cb(JSON.stringify(j,null,2));}
+function show(s){document.getElementById('out').textContent=s;}
+</script></body></html>

@@ -1,0 +1,28 @@
+{
+  "daily_revenue": [
+    {
+      "date": "2026-10-20",
+      "revenue": 200.5,
+      "orders": 2
+    },
+    {
+      "date": "2026-10-21",
+      "revenue": 200.0,
+      "orders": 1
+    },
+    {
+      "date": "2026-10-22",
+      "revenue": 45.0,
+      "orders": 1
+    }
+  ],
+  "checks": {
+    "raw_rows": 6,
+    "clean_rows": 4,
+    "null_amount_rows": 1,
+    "duplicate_order_ids": 1,
+    "max_date": "2026-10-22",
+    "passed": true
+  },
+  "status": "OK"
+}

@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: saas-invoicing-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free

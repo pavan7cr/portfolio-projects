@@ -1,0 +1,3 @@
+{
+  "lecture4.txt": "PostgreSQL indexes speed up queries on filtered columns. A B-tree index helps equality and range queries, but too many indexes slow down writes.\n"
+}

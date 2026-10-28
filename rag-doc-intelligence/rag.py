@@ -1,0 +1,60 @@
+"""RAG document Q&A MVP - stdlib only, no API key needed.
+Chunking + TF-IDF cosine retrieval, answers are ALWAYS grounded:
+the answer is the best-matching chunk, quoted with its source,
+or 'Not found in the documents' if similarity is below threshold.
+Run: python3 rag.py "your question"
+Run evaluation: python3 rag.py --eval
+Evaluation set is in eval.json - hit rate is measured, not claimed.
+"""
+import json, math, os, re, sys
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+DOCS = {
+    "lecture1.txt": "SQL joins combine rows from two tables. An INNER JOIN returns only matching rows. A LEFT JOIN returns all rows from the left table, with nulls where there is no match.",
+    "lecture2.txt": "Hypothesis testing starts with a null hypothesis. A p-value below 0.05 is commonly used to reject the null hypothesis, but it is not the probability that the null is true.",
+    "lecture3.txt": "Redis caching stores frequently requested results in memory. A cache hit avoids a database query. Cache invalidation is hard: stale data must be expired or evicted on update.",
+}
+
+if os.path.exists(os.path.join(HERE, "docs_index.json")):
+    DOCS.update(json.load(open(os.path.join(HERE, "docs_index.json"))))
+def tokens(s): return re.findall(r"[a-z0-9]+", s.lower())
+def tfidf_chunks():
+    chunks = []
+    for src, text in DOCS.items():
+        for sent in text.split(". "):
+            if sent.strip(): chunks.append((src, sent.strip()))
+    vocab = sorted({t for _, c in chunks for t in tokens(c)})
+    idf = {}
+    for v in vocab:
+        df = sum(1 for _, c in chunks if v in tokens(c))
+        idf[v] = math.log((len(chunks) + 1) / (df + 1)) + 1
+    vecs = []
+    for src, c in chunks:
+        toks = tokens(c); vec = {v: (toks.count(v) / len(toks)) * idf[v] for v in set(toks)}
+        vecs.append((src, c, vec))
+    return vecs, idf
+
+def answer(q, threshold=0.15):
+    vecs, idf = tfidf_chunks()
+    qt = tokens(q); qv = {v: (qt.count(v) / len(qt)) * idf.get(v, 1.0) for v in set(qt)}
+    def cos(a, b):
+        dot = sum(a.get(k, 0) * b.get(k, 0) for k in a)
+        na = math.sqrt(sum(v * v for v in a.values())); nb = math.sqrt(sum(v * v for v in b.values()))
+        return dot / (na * nb) if na and nb else 0.0
+    scored = sorted(((cos(qv, v), src, c) for src, c, v in vecs), reverse=True)
+    score, src, chunk = scored[0]
+    if score < threshold:
+        return {"answer": "Not found in the documents.", "source": None, "score": round(score, 3)}
+    return {"answer": chunk, "source": src, "score": round(score, 3)}
+
+if __name__ == "__main__":
+    if "--eval" in sys.argv:
+        ev = json.load(open(os.path.join(HERE, "eval.json")))
+        hits = 0
+        for item in ev:
+            r = answer(item["question"])
+            ok = r["source"] == item["expected_source"]
+            hits += ok; print(f"{'HIT' if ok else 'MISS'} | {item['question']} -> {r['source']} (score {r['score']})")
+        print(f"Hit rate: {hits}/{len(ev)} = {hits/len(ev):.0%}")
+    else:
+        print(json.dumps(answer(" ".join(sys.argv[1:]) or "What is a left join?"), indent=2))

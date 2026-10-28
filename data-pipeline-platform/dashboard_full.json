@@ -1,0 +1,38 @@
+{
+  "daily_revenue": [
+    {
+      "date": "2026-10-20",
+      "revenue": 200.5,
+      "orders": 2
+    },
+    {
+      "date": "2026-10-21",
+      "revenue": 200.0,
+      "orders": 1
+    },
+    {
+      "date": "2026-10-22",
+      "revenue": 45.0,
+      "orders": 1
+    }
+  ],
+  "posts_by_user": {
+    "1": 10,
+    "2": 10
+  },
+  "weather": {
+    "time": "2026-10-28T17:15",
+    "interval": 900,
+    "temperature_2m": 22.8
+  },
+  "checks": {
+    "raw_rows": 6,
+    "clean_rows": 4,
+    "clean_duplicates": 0,
+    "passed": true
+  },
+  "alerts": [
+    "Revenue drop: 200.0 -> 45.0"
+  ],
+  "status": "OK"
+}

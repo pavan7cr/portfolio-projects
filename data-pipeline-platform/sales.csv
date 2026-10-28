@@ -1,0 +1,7 @@
+order_id,order_date,amount,customer
+O1,2026-10-20,120.00,Acme
+O2,2026-10-20,80.50,Beta
+O1,2026-10-20,120.00,Acme
+O3,2026-10-21,200.00,Acme
+O4,2026-10-21,,Gamma
+O5,2026-10-22,45.00,Beta
